@@ -1,0 +1,22 @@
+# Arquivos sensíveis
+.env
+conexao.php
+cnd.php
+
+# Logs e arquivos temporários
+*.log
+*.bak
+*.tmp
+
+# Arquivos de banco de dados
+*.sql
+*.sqlite
+*.db
+
+# IDEs e editores
+.vscode/
+.idea/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
