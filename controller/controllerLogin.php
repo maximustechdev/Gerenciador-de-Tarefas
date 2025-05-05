@@ -11,17 +11,5 @@ if ($_POST) {
         $password = $_POST["input_password"];
 
         $response = $login->verificarLogin($email, $password);
-
-        echo "<script>console.log('Adicionamente realizado!'</script>";
-
-        echo "<script>
-                $(documente).ready(function () {
-                    Swal.fire({
-                    title: 'Success!',
-                    text: 'Login realizado com sucesso!',
-                    icon: 'success'
-                    });
-                });
-            </script>";
     }
 }

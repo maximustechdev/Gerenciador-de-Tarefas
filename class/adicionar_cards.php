@@ -13,7 +13,7 @@ class Cadastro_Tickets
     public function cadastrar_tickets($title, $description, $status)
     {
         try {
-            $sql = "INSERT INTO tickets (title, description, status) VALUES ('$title', '$description', '$status')";
+            $sql = "INSERT INTO tasks (title, description, status) VALUES ('$title', '$description', '$status')";
             $stm = $this->conexao->prepare($sql);
             return $stm->execute();
         } catch (PDOException $e) {
@@ -21,4 +21,5 @@ class Cadastro_Tickets
             return false;
         }
     }
+
 }
