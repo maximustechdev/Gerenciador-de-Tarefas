@@ -5,6 +5,7 @@
   font-family: Arial, sans-serif;
 }
 
+
 body {
   background-color: #f4f7fa;
   overflow-x: hidden;
@@ -18,16 +19,17 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+
 .kanban-container {
   display: flex;
   flex-direction: row;
-  overflow-x: auto;
+  gap: 20px;
   padding: 2rem;
-  gap: 1.5rem;
+  overflow-x: auto;
 }
 
 .kanban-coluna {
-  background-color: white;
+  background-color: #ffffff;
   border-radius: 8px;
   width: 300px;
   min-width: 300px;
@@ -40,10 +42,13 @@ body {
   font-size: 20px;
   color: #333;
   margin-bottom: 12px;
+  text-align: center;
 }
+
 
 .tasks {
   flex-grow: 1;
+  min-height: 100px;
   border-top: 1px solid #ccc;
   margin-top: 1rem;
   padding-top: 1rem;
@@ -53,13 +58,74 @@ body {
   background-color: #1976d2;
   color: white;
   border: none;
-  padding: 5px;
+  padding: 10px;
   margin-top: 15px;
   cursor: pointer;
   border-radius: 5px;
+  font-weight: bold;
+  width: 100%;
   transition: background-color 0.2s ease;
 }
 
 .add-task:hover {
+  background-color: #145ea8;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+}
+
+.popUp_informacoes {
+  display: none;
+  position: fixed;
+  top: 20%;
+  left: 35%;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  width: 30%;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.elementos {
+  margin-bottom: 10px;
+}
+
+.elementos label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: bold;
+}
+
+.elementos input,
+.elementos textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.elementos textarea {
+  resize: vertical;
+}
+
+.elementos button {
+  margin-right: 10px;
+  padding: 8px 12px;
+  border: none;
+  background-color: #1976d2;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.elementos button:hover {
   background-color: #145ea8;
 }

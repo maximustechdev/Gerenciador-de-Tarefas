@@ -10,16 +10,15 @@ class Cadastro_Tickets
         $this->conexao = Conexao::conectar();
     }
 
-    public function cadastrar_tickets($title, $description, $status)
+    public function cadastrar_tickets($title, $subject, $responsible)
     {
         try {
-            $sql = "INSERT INTO tasks (title, description, status) VALUES ('$title', '$description', '$status')";
+            $sql = "INSERT INTO tasks (title, subject, responsible) VALUES (?, ?, ?)";
             $stm = $this->conexao->prepare($sql);
-            return $stm->execute();
+            return $stm->execute([$title, $subject, $responsible]);
         } catch (PDOException $e) {
             echo "Erro ao cadastrar: " . $e->getMessage();
             return false;
         }
     }
-
 }
